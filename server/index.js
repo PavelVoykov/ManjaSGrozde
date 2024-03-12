@@ -1,3 +1,4 @@
+const bcrypt = require('bcryptjs');
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
@@ -15,6 +16,7 @@ const socketIO = require('socket.io')(http, {
         origin: "http://localhost:3000"
     }
 });
+console.log(credentials.password);
 let con = mysql.createConnection({
 	host:credentials.host,
 	user:credentials.user,

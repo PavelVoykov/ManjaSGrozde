@@ -1,7 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import ChatPage from './components/ChatPage';
+import ChatPage from './components/RegisterPage';
 import socketIO from 'socket.io-client';
+import MainPage from './components/MainPage';
+import Err from './components/Error.js';
+import SS from './components/Secret.js';
+
 
 const socket = socketIO.connect('http://localhost:4000');
 function App() {
@@ -9,8 +13,10 @@ function App() {
     <BrowserRouter>
       <div>
         <Routes>
-          <Route path="/" element={<Home/>}></Route>
-          <Route path="/chat" element={<ChatPage socket={socket} />}></Route>
+          <Route path="/" element={<MainPage/>}></Route>
+          <Route path="/register" element={<ChatPage socket={socket} />}></Route>
+          <Route path="/secret" element={<SS/>}></Route>
+          <Route path="*" element={<Err/>}></Route>
         </Routes>
       </div>
     </BrowserRouter>

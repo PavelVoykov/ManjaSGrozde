@@ -1,0 +1,79 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.ErrorMSGBox{
+	padding: 2%;
+}
+.ErrorBG{
+	padding: 5%;
+	background-color: #170900;
+	height: 100vh;
+	color: #000;
+	font-family: "Kaushan script", cursive;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	background-blend-mode: screen;
+	overflow: hidden;
+
+}
+.Lights h1 {
+    font-size: 44px;
+	transition-timing-function: linear;
+	transition-duration: 1500ms;
+}
+.Lights h1:hover {
+	color: #ff0000;
+	text-shadow: 0 0 10px #ff0000;
+}
+
+.Lights p {
+    font-size: 24px;
+	transition-timing-function: linear;
+	transition-duration: 1500ms;
+}
+
+.Lights p:hover {
+    color: #dade00;
+	text-shadow: 0 0 10px #ffa200;
+}
+
+.Lights a {
+    color: #353600;
+    text-decoration: none;
+	text-shadow:none;
+	transition-timing-function: linear;
+	transition-duration: 1000ms;
+	cursor: pointer;
+}
+
+.Lights a:hover {
+	color: #fbff00;
+	text-shadow: 0 0 10px #ffa200, 0 0 20px #ffa200, 0 0 30px #ffa200, 0 0 40px #ffa200;
+}
+
+@media (max-width: 768px) {
+    .Lights h1 {
+        font-size: 30px; /* Reduce font size for smaller screens */
+		color: #ff0000;
+		text-shadow: 0 0 10px #9b0000;
+    }
+    .Lights p {
+        font-size: 16px; /* Reduce font size for smaller screens */
+		color: #dade00;
+		text-shadow: 0 0 10px #ffa200;
+    }
+	.Lights a{
+		color: #fbff00;
+		text-shadow: 0 0 10px #ffa200, 0 0 20px #ffa200, 0 0 30px #ffa200, 0 0 40px #ffa200;
+	}
+	.ErrorMSGBox{
+		text-align: center;
+	}
+}
